@@ -13,3 +13,13 @@ lsp.preset('recommended')
 lsp.nvim_workspace()
 
 lsp.setup()
+
+-- diagnostic messages were not appearing before I added this block
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
